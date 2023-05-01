@@ -1,7 +1,46 @@
-# Vue 3 + Vite
+# My-client (Vue)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project is the frontend for the Task Management System, built using Vue 3, Vite, TypeScript, and Tailwind CSS.
 
-## Recommended IDE Setup
+## Getting Started
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Before you begin, ensure that you have the following software installed on your machine:
+
+- Node.js (version 14 or later)
+- npm or yarn (the latest version)
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/yourusername/My-client.git
+cd My-client
+
+2. Install the dependencies:
+npm install
+
+Or, if you're using Yarn:
+yarn i
+
+### Development
+
+To start the development server, run:
+npm run dev
+
+Or, if you're using Yarn:
+yarn dev
+
+Now, open your browser and navigate to `http://localhost:3000`. You should see the Task Management System frontend running.
+
+### Building
+
+To build the project for production, run:
+npm run build
+
+Or, if you're using Yarn:
+yarn build
+
+The built files will be in the `dist` directory.
+
+
+
+
