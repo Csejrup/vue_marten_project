@@ -460,19 +460,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sejru\\.nuget\\packages\\": {}
+    "/Users/csejrup/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sejru\\repo\\Capacit\\test-project\\my-server\\my-server.csproj",
+      "projectUniqueName": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/my-server/my-server.csproj",
       "projectName": "my-server",
-      "projectPath": "C:\\Users\\sejru\\repo\\Capacit\\test-project\\my-server\\my-server.csproj",
-      "packagesPath": "C:\\Users\\sejru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sejru\\repo\\Capacit\\test-project\\my-server\\obj\\",
+      "projectPath": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/my-server/my-server.csproj",
+      "packagesPath": "/Users/csejrup/.nuget/packages/",
+      "outputPath": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/my-server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sejru\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/csejrup/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -524,7 +524,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
