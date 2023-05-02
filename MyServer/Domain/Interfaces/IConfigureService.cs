@@ -1,6 +1,6 @@
 namespace Domain.Interfaces;
 
-public interface IInterface1
+public class IConfigureService
 {
     
 }
