@@ -1,3 +1,5 @@
+using Application.Services;
+using Domain.Repositories;
 using Marten;
 using Presentation.extensions;
 using Weasel.Core;
@@ -18,11 +20,22 @@ public class Startup
              options.Connection(connectingString!);
              options.AutoCreateSchemaObjects = AutoCreate.All;
              options.Events.DatabaseSchemaName = "event_store";
+            // options.Projections.SelfAggregate<>()
         });
         services.AddControllers();
         services.AddSwaggerConfiguration();
+        
+        // Register repositories
+        services.AddScoped<ITaskItemRepository, TaskItemRepository>();
+        services.AddScoped<ICommentRepository, CommentRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
-
+        // Register application services
+        services.AddScoped<TaskItemService>();
+        services.AddScoped<CommentService>();
+        services.AddScoped<UserService>();
+        
+        
     }
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
