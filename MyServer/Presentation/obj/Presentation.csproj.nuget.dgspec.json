@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/csejrup/RiderProjects/MyServer/Presentation/Presentation.csproj": {}
+    "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/Presentation.csproj": {}
   },
   "projects": {
-    "/Users/csejrup/RiderProjects/MyServer/Presentation/Presentation.csproj": {
+    "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/csejrup/RiderProjects/MyServer/Presentation/Presentation.csproj",
+        "projectUniqueName": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "/Users/csejrup/RiderProjects/MyServer/Presentation/Presentation.csproj",
+        "projectPath": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/Presentation.csproj",
         "packagesPath": "/Users/csejrup/.nuget/packages/",
-        "outputPath": "/Users/csejrup/RiderProjects/MyServer/Presentation/obj/",
+        "outputPath": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/csejrup/.nuget/NuGet/NuGet.Config"

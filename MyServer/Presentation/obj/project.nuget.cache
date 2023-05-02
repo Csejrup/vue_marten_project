@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BaqL/obyoLAWTfXoprKkYf6WRjbU9mFn1ORYDiBN0IOwZHecvW94am5a1s3JFBv1hH8gz620ipRpwx90IJG25Q==",
+  "dgSpecHash": "5XABYwT5I5H7hZQyFNITsDq9IXZViqwF/d2zf7JWGWk7zprzv2d6xElwq3Dyj9xc/jmqj5PEZfbZPh5jY4DJ/A==",
   "success": true,
-  "projectFilePath": "/Users/csejrup/RiderProjects/MyServer/Presentation/Presentation.csproj",
+  "projectFilePath": "/Users/csejrup/Development/repos/stack_template/vue_marten_project/MyServer/Presentation/Presentation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
