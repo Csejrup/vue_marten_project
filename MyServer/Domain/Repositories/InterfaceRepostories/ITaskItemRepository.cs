@@ -1,6 +1,6 @@
 ﻿using Domain.Aggregates.Tasks;
 
-namespace Domain.Repositories;
+namespace Domain.Repositories.InterfaceRepostories;
 
 public interface ITaskItemRepository
 {

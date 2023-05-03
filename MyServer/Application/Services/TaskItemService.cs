@@ -1,6 +1,7 @@
 ﻿using Application.Services.ServiceInterfaces;
 using Domain.Aggregates.Tasks;
 using Domain.Repositories;
+using Domain.Repositories.InterfaceRepostories;
 
 namespace Application.Services;
 

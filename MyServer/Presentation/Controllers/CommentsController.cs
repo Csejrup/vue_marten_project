@@ -35,16 +35,16 @@ public class CommentsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Comment>> CreateComment([FromBody] string content)
+    public async Task<ActionResult<Comment>> CreateComment([FromBody] CommentCreateModel commentCreateModel)
     {
-        var comment = await _commentService.CreateCommentAsync(content);
+        var comment = await _commentService.CreateCommentAsync(commentCreateModel.Content);
         return CreatedAtAction(nameof(GetComment), new { id = comment.Id }, comment);
     }
 
     [HttpPut("{id:guid}")]
-    public async Task<IActionResult> UpdateComment(Guid id, [FromBody] string content)
+    public async Task<IActionResult> UpdateComment([FromBody] CommentCreateModel commentCreateModel)
     {
-        await _commentService.UpdateCommentAsync(id, content);
+        await _commentService.UpdateCommentAsync(commentCreateModel.Id, commentCreateModel.Content);
         return NoContent();
     }
 
@@ -54,4 +54,10 @@ public class CommentsController : ControllerBase
         await _commentService.DeleteCommentAsync(id);
         return NoContent();
     }
+}
+
+public class CommentCreateModel
+{
+    public Guid Id { get; private set; }
+    public string Content { get; set; }
 }

@@ -30,14 +30,14 @@ public class TaskItemsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TaskItem>> CreateTaskItem([FromBody] TaskItemCreateModel taskItemCreateModel)
     {
-        var taskItem = await _taskItemService.CreateTaskAsync(taskItemCreateModel);
+        var taskItem = await _taskItemService.CreateTaskAsync(taskItemCreateModel.Title, taskItemCreateModel.Description);
         return CreatedAtAction(nameof(GetTaskItem), new { id = taskItem.Id }, taskItem);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTaskItem(Guid id, [FromBody] string title, [FromBody] string description)
+    public async Task<IActionResult> UpdateTaskItem([FromBody] TaskItemCreateModel taskItemCreateModel)
     {
-        await _taskItemService.UpdateTaskAsync(id, title, description);
+        await _taskItemService.UpdateTaskAsync(taskItemCreateModel.Id, taskItemCreateModel.Title, taskItemCreateModel.Description);
         return NoContent();
     }
     
@@ -47,4 +47,6 @@ public class TaskItemCreateModel
 {
     public string Title { get; set; }
     public string Description { get; set; }
+    public Guid Id { get; private set; }
+
 }

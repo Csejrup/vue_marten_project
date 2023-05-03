@@ -35,16 +35,23 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<User>> RegisterUser([FromBody] string name, [FromBody] string email)
+    public async Task<ActionResult<User>> RegisterUser([FromBody] CreateUserModel createUserModel)
     {
-        var user = await _userService.RegisterUserAsync(name, email);
+        var user = await _userService.RegisterUserAsync(createUserModel.Name, createUserModel.Email);
         return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateUser(Guid id, [FromBody] string name, [FromBody] string email)
+    public async Task<IActionResult> UpdateUser([FromBody] CreateUserModel createUserModel)
     {
-        await _userService.UpdateUserAsync(id, name, email);
+        await _userService.UpdateUserAsync(createUserModel.Id, createUserModel.Name, createUserModel.Email);
         return NoContent();
     }
+}
+
+public class CreateUserModel
+{
+    public Guid Id { get; private set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
 }

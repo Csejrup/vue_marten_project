@@ -19,9 +19,10 @@ using System.Reflection;
                 s.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Clean Architecture Template",
-                    Description = "Clean Architecture Template Web API",
+                    Title = "Task Management",
+                    Description = "Task Management Web API",
                 });
+                /*
                 s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description = "Input the JWT like: Bearer {your token}",
@@ -44,7 +45,7 @@ using System.Reflection;
                         },
                         Array.Empty<string>()
                     },
-                });
+                });*/
               //  var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                // s.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);

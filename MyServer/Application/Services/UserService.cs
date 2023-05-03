@@ -1,6 +1,7 @@
 ﻿using Application.Services.ServiceInterfaces;
 using Domain.Aggregates.Users;
 using Domain.Repositories;
+using Domain.Repositories.InterfaceRepostories;
 
 namespace Application.Services;
 
@@ -40,7 +41,7 @@ public class UserService : IUserService
         return _userRepository.GetByIdAsync(id);
     }
 
-    public Task<IEnumerable<User>> GetAllAsync()
+    public Task<IReadOnlyList<User>> GetAllAsync()
     {
         return _userRepository.GetAllAsync();
     }

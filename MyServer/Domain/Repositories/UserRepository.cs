@@ -1,4 +1,5 @@
 ﻿using Domain.Aggregates.Users;
+using Domain.Repositories.InterfaceRepostories;
 using Marten;
 
 namespace Domain.Repositories;
@@ -11,7 +12,7 @@ public class UserRepository : IUserRepository
     // Constructor that takes the Marten document session as a dependency
     public UserRepository(IDocumentSession session)
     {
-        _session = session;
+        _session = session ?? throw new ArgumentNullException(nameof(session));
     }
 
     // Load a User aggregate by its ID using event sourcing
@@ -27,8 +28,8 @@ public class UserRepository : IUserRepository
         await _session.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<User>> GetAllAsync()
+    public Task<IReadOnlyList<User>> GetAllAsync()
     {
-        throw new NotImplementedException();
+      return _session.Query<User>().ToListAsync();
     }
 }

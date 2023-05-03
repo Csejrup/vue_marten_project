@@ -8,6 +8,6 @@ public interface IUserService
     Task UpdateUserAsync(Guid id, string name, string email);
 
     Task<User> GetUserByIdAsync(Guid id);
-    Task<IEnumerable<User>> GetAllAsync();
+    Task<IReadOnlyList<User>> GetAllAsync();
 
 }
